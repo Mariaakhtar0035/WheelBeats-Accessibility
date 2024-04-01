@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="rgb(13, 41, 25)">
+    <title>BMO Field</title>
+    <link rel="icon" type="image/x-icon" href="/images/icons/icon-512x512.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="venues.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(45, 34, 43, 0.775), rgba(90, 92, 104, 0.807)), url(images/BMOField/BmoFieldBG.jpg);
+        }
+        header {
+            background-color: #02150f;
+        }
+        h1 {
+            color: #fff;
+        }
+        h2 {
+            color: #f5f2f1;
+            background-color: #02150f;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            background-image: linear-gradient(rgb(13, 41, 25), rgb(78, 93, 79));
+        }
+        
+        .container .swiper-slide img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .container img{
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            top: 10px;
+            height: 400px;
+        }
+
+        a{
+            color: #84ca9b;
+        }
+
+        
+       
+        @media (max-width: 480px) {
+            .container img{
+                width: calc(100% - 20px);
+            }
+            .container .swiper-slide img{
+                width: 350px;
+                height: 200px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <!-- Back button -->
+        <a href="index.html" class="back-arrow">&#8592;</a>
+        <!-- Heading -->
+        <h1>BMO Field</h1>
+
+    </header> 
+        
+    <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/BMOField/bmofield.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/BMOField/bmofield2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/BMOField/bmofield3.jpg" alt=""></div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <!-- Contacting the Venue -->
+        <h2>Contact Information</h2>
+        <ul> 
+            <li>Call <a href=tel:8559854625>(855) 985-4625</a> for inquiries</li>
+            <li>Book tickets via <a href="https://www.ticketmaster.ca/bmo-field-tickets-toronto/venue/131713">Ticketmaster</a> </li>
+            <li>Address: 170 Princes' Blvd, Toronto, ON M6K 3C3</li>
+            <li>Website: <a href="https://www.bmofield.com/">BMO Field</a></li>
+        </ul>
+        <!-- Accessible seating -->
+        <h2>Accessible Seating</h2>
+        <ul>
+            <li>Wheelchair sections are designated with an “A” following the section number (eg.  124A, 321A, and 325A - which must be entered from Gate 5)</li>
+            <li>Accessible sections have no outter barriers and removable seating that can accommodate wheelchairs if needed</li>
+            <li>Up to four (4) seats may be purchased at one time in an accessible section</li>
+            <li>Virtual Venue: <a href="https://torontofc.io-media.com/web/index.html#">View</a></li>
+        </ul>
+
+        <!-- Image of the venue layout -->
+        <a href="images/BMOField/bmofield-map.jpg"><img src="images/BMOField/bmofield-map.jpg" alt=""></a>
+
+        <!-- Accessible restrooms -->
+        <h2>Restrooms</h2>
+        <ul>
+            <li> Every restroom in the stadium is accessible</li>
+        </ul>
+
+        <!-- Information about accessible parking -->
+        <h2>Accessible Parking</h2>
+        <ul>
+            <li>Exhibition Place Lot 2, located just south of Gate 3</li>
+            <li>People being picked up or dropped off by private vehicle or Wheel-Trans may do so at Gate 1 (near the Ticket Office) or Gate 3 (just off Princes’ Blvd)</li>
+        </ul>
+
+        <!-- Information about accessible entrance -->
+        <h2>Accessible Entrance</h2>
+        <ul>
+            <li>Gate 5 is where those with accessibility seats should go (closest to your seats)</li>
+        </ul>
+
+        
+
+        <!-- Google Map iframe -->
+        <h2>Map</h2>
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.7205919333774!2d-79.42119112400374!3d43.63317405372608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3505f6ef4351%3A0x9d2169b3f7b70c2d!2sBMO%20Field!5e0!3m2!1sen!2sca!4v1710812144803!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.container .swiper', {
+            // Autoplay settings
+            autoplay: {
+                delay: 3000, // Delay between slides in milliseconds
+                disableOnInteraction: false // Autoplay continues even after user interaction
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, // Allow pagination bullets to be clickable
+            },
+            navigation: {
+                nextEl: '.swiper-button-next', // Next slide button class
+                prevEl: '.swiper-button-prev', // Previous slide button class
+            },
+        });
+    </script>
+
+</body>
+</html>

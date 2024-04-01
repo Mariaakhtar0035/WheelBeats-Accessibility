@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="rgb(28, 11, 37)">
+    <title>London Music Hall</title>
+    <link rel="icon" type="image/x-icon" href="/images/icons/icon-512x512.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="venues.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(45, 34, 43, 0.775), rgba(90, 92, 104, 0.807)), url(images/LondonMusicHall/londonhall.jpg);
+        }
+        header {
+            background-color: #532466;
+        }
+        h1 {
+            color: #fff;
+        }
+        h2 {
+            color: #f5f2f1;
+            background-color: #532466;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            background-image: linear-gradient(rgb(28, 11, 37), rgb(117, 88, 123));
+        }
+        .container .swiper-slide img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .container img{
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            top: 10px;
+        }
+
+        a{
+            color: #db9ed9;
+        }
+
+        
+       
+        @media (max-width: 480px) {
+            .container img{
+                width: calc(100% - 20px);
+                height: 200px;
+            }
+            .container .swiper-slide img{
+                width: 350px;
+                height: 200px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <!-- Back button -->
+        <a href="index.html" class="back-arrow">&#8592;</a>
+        <!-- Heading -->
+        <h1>London Music Hall</h1>
+
+    </header> 
+        
+    <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/LondonMusicHall/londonhall2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/LondonMusicHall/londonhall2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/LondonMusicHall/londonhall3.jpg" alt=""></div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- Information about ticket purchasing -->
+        <h2>Contact Information</h2>
+        <ul>
+            <li>Call <a href=tel:5194321107>(519) 432-1107</a> for inquiries</li>
+            <li>Book tickets via <a href="https://www.ticketmaster.ca/london-music-hall-tickets-london/venue/131820">Ticketmaster</a> </li>
+            <li>Address: 185 Queens Ave, London, ON N6A 1G7</li>
+            <li>Website: <a href="https://londonmusichall.com/">London Music Hall</a></li>
+        </ul>
+        <!-- Accessible seating -->
+        <h2>Accessible Seating</h2>
+        <ul>
+            <li>Only the main floor is accessible</li>
+            <li>Rum Runners is not accessible</li>
+            <li>The London Music Hall Mezzanine & Balcony section are not wheelchair accessible (no passenger elevator available)</li>
+            <li>Balcony Rows are reservable and wheelchair accessible</li>
+            <li>General floor is standing only</li>
+        </ul>
+
+        <!-- Image of the venue layout -->
+        <a href="images/LondonMusicHall/londonhall-map.png"><img src="images/LondonMusicHall/londonhall-map.png" alt="" height="300px" width="400px"></a>
+
+        <!-- Accessible restrooms -->
+        <h2>Restrooms</h2>
+        <ul>
+            <li>Restrooms are large, but it is unclear whether they are fully wheelchair accessible</li>
+        </ul>
+
+        <!-- Information about accessible parking -->
+        <h2>Accessible Parking</h2>
+        <ul>
+            <li>There is a municipal lot right outside the venue doors on Queens Ave (0.5 km)</li>
+        </ul>
+
+        <!-- Information about accessible entrance -->
+        <h2>Accessible Entrance</h2>
+        <ul>
+            <li>Main entrance is accessible</li>
+        </ul>
+
+        <h2>Additional Information</h2>
+        <ul>
+            <li>It is encouraged to call prior to the show to let the venue know you’re coming so they can ensure to make everything as easy for you as possible</li>
+        </ul>
+
+        
+
+        <!-- Google Map iframe -->
+        <h2>Map</h2>
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919.127557003636!2d-81.24972078957903!3d42.98465343730434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef202d314a80f%3A0xc7321a1d12d4275e!2sLondon%20Music%20Hall%20Music%20Complex!5e0!3m2!1sen!2sca!4v1709670472723!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.container .swiper', {
+            // Autoplay settings
+            autoplay: {
+                delay: 3000, // Delay between slides in milliseconds
+                disableOnInteraction: false // Autoplay continues even after user interaction
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, // Allow pagination bullets to be clickable
+            },
+            navigation: {
+                nextEl: '.swiper-button-next', // Next slide button class
+                prevEl: '.swiper-button-prev', // Previous slide button class
+            },
+        });
+    </script>
+
+</body>
+</html>
