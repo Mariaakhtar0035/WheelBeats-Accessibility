@@ -1,0 +1,83 @@
+body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+}
+
+header a.back-arrow {
+    top: 50%; 
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+}
+header {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 1.5rem;
+    color: #151312;
+    margin-top: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+}
+
+ul {
+    
+    padding: 25px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+li {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+    margin-top: 30px;
+}
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.container .swiper {
+    width: 80%;
+}
+
+.container .swiper .swiper-button-prev, 
+.swiper .swiper-button-next {
+    color: #fff;
+}
+
+@media (max-width: 480px) {
+    .container .swiper-slide img{
+        width: 350px;
+        height: 200px;
+    }
+   body{
+    padding: 0;
+   }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+    <meta name="theme-color" content="rgba(112, 41, 99, 0.776)">
+    <title>Concert Accessibility</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="menu.css">  
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="manifest" href="manifest.json">
+    
+</head>
+<body>
+    
+   <h1>WheelBeats</h1>
+
+    <!-- Search Bar -->
+   <div class="container"> 
+        <form class="search-bar" onsubmit="searchVenue(); return false;">
+            <input type="text" placeholder="Search Venue" id="searchInput">
+            <button type="submit"><img src="images/HomePage/search.png" alt="Search"></button>
+        </form>
+
+    </div>
+
+
+    <!-- Action sections -->
+    <div class="Sections">
+        <div class="box fade-in-section">
+            <h2>Discover Accessible Venues</h2>
+            <p>Search our database for venues that meet your accessibility needs</p>
+            <i class="fa-solid fa-wheelchair"></i>
+        </div>
+    
+        <div class="box fade-in-section">
+            <h2>Plan Your Next Event</h2>
+            <p>Search for upcoming events and book tickets </p>
+            <i class="fa-solid fa-location-dot"></i>
+            
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Our Story</h2>
+            <p>Discover the inspiration and journey behind the creation of our accessibility-focused web app</p>
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+    
+    </div>
+
+
+    <!-- App icon display -->
+    <div class="icon" id="iconSection">
+        <h2>Accessibility At Your Fingertips: <br>Your Venue Access Companion</h2>
+        <img src="images/HomePage/icon.png" alt="">
+    </div>
+
+
+    <!-- bottom menu -->
+    <div class="bottom-menu">
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i> <br> Home
+        </a>
+        <a href="VenueList.html">
+            <i class="fas fa-search"></i> <br> Browse
+        </a>
+        <a href="events.html">
+            <i class="fas fa-calendar-alt"></i> <br> Events
+        </a>
+        <a href="about.html">
+            <i class="fas fa-info-circle"></i> <br> About
+        </a>
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <script>
+        // Service worker registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    console.error('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+
+    <script src="https://kit.fontawesome.com/fb6729d045.js" crossorigin="anonymous"></script>
+</body>
+</html>
+

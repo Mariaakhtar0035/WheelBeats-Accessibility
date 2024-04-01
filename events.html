@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="rgba(0, 8, 51, 0.9)">
+    <title>Upcoming Events</title>
+    <link rel="icon" type="image/x-icon" href="/images/icons/icon-512x512.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: linear-gradient(rgba(26, 17, 24, 0.772), rgba(0, 8, 51, 0.9)), url(images/EventsPage/events-background.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            justify-content: flex-start; 
+            height: 2800px;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            padding: 20px;
+        }
+        .events {
+            padding-bottom: 100px; 
+        }
+
+        .events h1 {
+            font-size: 36px;
+            top: 10px;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+        }
+        .events p{
+            color: #c6f0ff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .events .description {
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .image-link-description {
+            font-size: 20px;
+        }
+        .event-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            
+        }
+        .event-images a {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 10px 10px 5px rgb(18, 5, 18);
+        }
+        .event-images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Styles for upcoming concerts */
+        #concerts {
+            margin-top: 20px;
+        }
+        .concert {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 5px rgb(165, 166, 195);
+        }
+        .concert h2 {
+            color: #007bff;
+            margin-top: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .concert p {
+            color: #110f0f;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left; 
+            padding: 5px;
+        }
+
+        .concert-image {
+                
+            overflow: hidden;
+        }
+
+        .concert-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        #upcoming-concerts h2{
+            font-size: 30px;
+            padding: 20px 20px;
+            position: relative;
+        }
+
+        /* ipad screen size*/
+        @media (max-width: 767px) {
+            .event-images a {
+                width: calc(50% - 20px);
+            }
+        }
+
+        /* iphone screen size*/
+        @media (max-width: 480px) {
+            body {
+            
+                height: 6000px;
+            
+            }
+            .events h1{
+                padding: 50px 20px;
+            }
+            .events .description {
+                font-size: 20px;
+            }
+            .event-images a {
+                width: calc(100% - 20px);
+            }
+        }
+
+        /* Screen sizes greater than phone*/
+        @media screen and (min-width: 800px) {
+            .concert-image {
+                display: none;
+            }
+        }
+
+    </style>
+    
+</head>
+
+
+<body>
+    <!-- Section for Ticketmaster links for concerts, sports, and more-->
+    <div class="events">
+        <h1>Events For You</h1>
+        <p class="description">Discover Your Next Adventure: Explore The Latest Concerts, Sports, And Theater Events Near You</p>
+        <p class="image-link-description" style="color: #fff;">Book tickets on Ticketmaster</p>
+        <div class="event-images">
+            <a href="https://www.ticketmaster.ca/discover/concerts?global=true">
+                <img src="images/EventsPage/ConcertEvent.png" alt="Concert Image">
+            </a>
+            <a href="https://www.ticketmaster.ca/discover/sports">
+                <img src="images/EventsPage/SportEvent.png" alt="Sports Event Image">
+            </a>
+            <a href="https://www.ticketmaster.ca/discover/arts-theater">
+                <img src="images/EventsPage/TheaterEvent.png" alt="Theater Event Image">
+            </a>
+        </div>
+    </div>
+
+
+    <div id="upcoming-concerts">
+        <h2>Upcoming Concerts </h2>
+    </div> 
+
+     <!-- Section for Live Ticketmaster fetched concerts-->
+    <div id="concerts"></div>
+
+    <!-- bottom menu -->
+    <div class="bottom-menu">
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i> <br> Home
+        </a>
+        <a href="VenueList.html">
+            <i class="fas fa-search"></i> <br> Browse
+        </a>
+        <a href="events.html">
+            <i class="fas fa-calendar-alt"></i> <br> Events
+        </a>
+        <a href="about.html">
+            <i class="fas fa-info-circle"></i> <br> About
+        </a>
+    </div>
+
+    <script src="EventsApi.js"></script>
+    <script src="https://kit.fontawesome.com/fb6729d045.js" crossorigin="anonymous"></script>
+</body>
+</html>

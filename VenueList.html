@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venues</title>
+    <link rel="icon" type="image/x-icon" href="/images/icons/icon-512x512.png">
+    <meta name="theme-color" content="rgba(168, 123, 158, 0.787)">
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(168, 123, 158, 0.787), rgb(34, 40, 73)), url(images/BrowsePage/VenueListBG.jpg);
+            background-position: center;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+            overflow-x: hidden;
+            height: 2300px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 36px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            text-align: center;
+            margin-top: 20px;
+            font-size: 25px;
+            color: rgb(28, 7, 66);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .List {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .box {
+            background-color: rgba(45, 4, 36, 0.524);
+            height: 270px;
+            width: 300px;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            box-shadow: 5px 5px 5px rgb(134, 61, 137);
+        }
+
+        .box h2 {
+            text-align: center;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+
+        .box img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 150px;
+            width: 250px;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px rgb(25, 2, 25);
+        }
+
+        .box.is-visible {
+            opacity: 1;
+        }
+
+        .bottom-menu{
+            left: 0;
+        }
+
+        /* Media query for phone screens */
+        @media (min-width: 319px) and (max-width: 480px) {
+            body{
+                height: 5500px;
+            }
+        }
+
+        /* Media query for iPad screens */
+        @media (min-width: 500px) and (max-width: 880px) {
+            body{
+                height: 3300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Venue Hub</h1>
+    <p>Explore Our Venue Collection </p>
+
+    <!-- List of venues -->
+    <div class="List">
+        <div class="box fade-in-section">
+            <h2>BMO Field</h2>
+            <a href="BmoField.html">
+                <img src="images/BMOField/bmofield.jpg" alt="Image of BMO Field Stadium">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Budweiser Gardens</h2>
+            <a href="BudweiserGardens.html">
+                <img src="images/BudweiserGardens/budweisergardens.jpg" alt="Image of Budweiser Stage Seating">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Budweiser Stage</h2>
+            <a href="BudweiserStage.html">
+                <img src="images/BudweiserStage/BudStage.jpeg" alt="Image of Danforth Music Hall seating">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Danforth Music Hall</h2>
+            <a href="DanforthMusicHall.html">
+                <img src="images/DanforthMusicHall/dan.jpeg" alt="Image of The Axis Club stage">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>First Ontario Centre</h2>
+            <a href="FirstOntarioCentre.html">
+                <img src="images/FirstOntarioCentre/FirstOntario.png" alt="Image of First Ontario Centre Arena">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>First Ontario Concert Hall</h2>
+            <a href="FirstOntarioConcertHall.html">
+                <img src="images/FirstOntarioConcertHall/firstcontariohall.jpg" alt="Image of First Ontario Concert hall seating">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>History Toronto</h2>
+            <a href="history.html">
+                <img src="images/History/history3.jpg" alt="Image of History Toronto stage">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>London Music Hall</h2>
+            <a href="LondonMusicHall.html">
+                <img src="images/LondonMusicHall/londonhall.jpg" alt="Image of London Music Hall Stage">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Massey Hall</h2>
+            <a href="MasseyHall.html">
+                <img src="images/MasseyHall/masseyhall.jpg" alt="Image of Masey Hall seating">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Meridian Hall</h2>
+            <a href="MeridianHall.html">
+                <img src="images/MeridianHall/meridian1.jpeg" alt="Image of Meridian Hall seating">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Paramount Fine Foods Centre</h2>
+            <a href="ParamountFineFoods.html">
+                <img src="images/ParamountFineFoods/paramount.png" alt="Image of Paramount Fine Foods Arena">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Rogers Centre</h2>
+            <a href="Rogers.html">
+                <img src="images/RogersCentre/rogers.jpeg" alt="Image of Rogers Centre Stadium">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Roy Thomson Hall</h2>
+            <a href="RoyThomsonHall.html">
+                <img src="images/RoyThomsonHall/RoyThomson.jpeg" alt="Image of Roy Thomson Hall Building">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>Scotiabank Arena</h2>
+            <a href="scotiabank.html">
+                <img src="images/ScotiabankArena/scotiabank1.jpeg" alt="Image of Scotiabank Arena">
+            </a>
+        </div>
+        
+        <div class="box fade-in-section">
+            <h2>The Axis Club</h2>
+            <a href="AxisClub.html">
+                <img src="images/TheAxisClub/axisclub.jpg" alt="Image of The Axis Club stage">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>The Opera House</h2>
+            <a href="TheOperaHouse.html">
+                <img src="images/TheOperaHouse/operahouse3.jpg" alt="Image of The Opera House stage">
+            </a>
+        </div>
+
+        <div class="box fade-in-section">
+            <h2>The Studio Hamilton</h2>
+            <a href="TheStudioHamilton.html">
+                <img src="images/TheStudio/thestudio2.jpg" alt="Image of The Studio Hamilton Seating">
+            </a>
+        </div>
+    </div>
+
+    <!-- bottom menu -->
+    <div class="bottom-menu">
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i> <br> Home
+        </a>
+        <a href="VenueList.html">
+            <i class="fas fa-search"></i> <br> Browse
+        </a>
+        <a href="events.html">
+            <i class="fas fa-calendar-alt"></i> <br> Events
+        </a>
+        <a href="about.html">
+            <i class="fas fa-info-circle"></i> <br> About
+        </a>
+    </div>
+
+    <script>
+        // Animation fade in effect for boxes
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/fb6729d045.js" crossorigin="anonymous"></script>
+</body>
+</html>
