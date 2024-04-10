@@ -3,7 +3,7 @@ function fetchConcerts() {
     // Make a GET request to the Ticketmaster API 
     $.ajax({
         type: "GET",
-        url: "https://app.ticketmaster.com/discovery/v2/events.json?apikey=Nc7L7IHXd2dCEeKhtpvl4G3sYqVaXx15&segmentName=Music&size=10&countryCode=CA&stateCode=ON",
+        url: "https://app.ticketmaster.com/discovery/v2/events.json?apikey=Nc7L7IHXd2dCEeKhtpvl4G3sYqVaXx15&segmentName=Music&size=20&countryCode=CA&stateCode=ON",
         async: true,
         dataType: "json",
         success: function(json) {
